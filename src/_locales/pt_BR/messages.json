@@ -1,42 +1,42 @@
 {
 	"name": {
 		"message": "ZooMeeting Redirector",
-		"description": "Name of the extension."
+		"description": "Nome dell'estensione."
 	},
 	"short_name": {
 		"message": "ZooM-WC Red",
-		"description": "Shorted Name of the extension."
+		"description": "Nome accorciato dell'estensione."
 	},
 	"description": {
-		"message": "A web extension that redirects meetings to the web client.",
-		"description": "Description of the extension."
+		"message": "Un'estensione che reindirizza le riunioni alla versione web client.",
+		"description": "Descrizione dell'estensione."
 	},
 	"popup_title": {
 		"message": "ZooMeeting\nRedirector",
-		"description": "Title of extension inside the popup."
+		"description": "Titolo dell'estensione visualizzato nel popup."
 	},
 	"enabled": {
-		"message": "Enabled",
-		"description": "Text info when extension is enabled."
+		"message": "Attivato",
+		"description": "Info testo quando l'estensione è attiva."
 	},
 	"disabled": {
-		"message": "Disabled",
-		"description": "Text info when extension is disabled."
+		"message": "Disattivato",
+		"description": "Info testo quando l'estensione non è attiva."
 	},
 	"popup_changelog": {
 		"message": "Changelog",
-		"description": "Title of the changelog URL."
+		"description": "Titolo dell'URL al changelog."
 	},
 	"popup_issue_tracker": {
 		"message": "Issue Tracker",
-		"description": "Title of the issue tracker URL."
+		"description": "Titolo dell'URL al l'issue tracker."
 	},
 	"popup_source_code": {
-		"message": "Source Code",
-		"description": "Title of the source code URL."
+		"message": "Codice Sorgente",
+		"description": "Titolo dell'URL al source code."
 	},
 	"popup_addon_version": {
-		"message": "Installed version",
-		"description": "Title of element addon_version."
+		"message": "Versione installata",
+		"description": "Titolo dell'elemento addon_version."
 	}
 }
