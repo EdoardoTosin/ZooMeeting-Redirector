@@ -15,10 +15,14 @@ function loadPopup() {
 		document.querySelector(selector)[prop] = msg;
 	}
 	
-	// Set meta elements
+	// Set head title
 	setLocaleProperty('title', 'innerText', 'name');
+	
+	// Set meta tags
 	setProperty("meta[name='author']", 'content', author);
 	setLocaleProperty("meta[name='description']", 'content', 'description');
+	
+	// Set title element
 	setLocaleProperty('#title', 'innerText', 'popup_title');
 	
 	// Set changelog element
