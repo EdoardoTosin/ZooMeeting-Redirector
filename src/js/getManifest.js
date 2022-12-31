@@ -1,39 +1,49 @@
-const homePage = chrome.runtime.getManifest().homepage_url;
+const homePage_URL = chrome.runtime.getManifest().homepage_url;
 const addonVersion = "v" + chrome.runtime.getManifest().version;
 const author = chrome.runtime.getManifest().author;
-const changelogURL = homePage + "/blob/main/CHANGELOG.md";
-const issue_trackerURL = homePage + "/issues";
+const changelog_URL = homePage_URL + "/blob/main/CHANGELOG.md";
+const issue_tracker_URL = homePage_URL + "/issues";
 
 // Load _locales and manifest data into popup.html when opened.
+function loadPopup() {
+	
+	function setLocaleProperty(selector, prop, msg) {
+		document.querySelector(selector)[prop] = chrome.i18n.getMessage(msg);
+	}
+	
+	function setProperty(selector, prop, msg) {
+		document.querySelector(selector)[prop] = msg;
+	}
+	
+	// Set meta elements
+	setLocaleProperty('title', 'innerText', 'name');
+	setProperty("meta[name='author']", 'content', author);
+	setLocaleProperty("meta[name='description']", 'content', 'description');
+	setLocaleProperty('#title', 'innerText', 'popup_title');
+	
+	// Set changelog element
+	setLocaleProperty('#changelog', 'innerText', 'popup_changelog');
+	setProperty('#changelog', 'href', changelog_URL);
+	setProperty('#changelog', 'title', changelog_URL);
+	
+	// Set issue_tracker element
+	setLocaleProperty('#issue_tracker', 'innerText', 'popup_issue_tracker');
+	setProperty('#issue_tracker', 'href', issue_tracker_URL);
+	setProperty('#issue_tracker', 'title', issue_tracker_URL);
+	
+	// Set source_code element
+	setLocaleProperty('#source_code', 'innerText', 'popup_source_code');
+	setProperty('#source_code', 'href', homePage_URL);
+	setProperty('#source_code', 'title', homePage_URL);
+	
+	// Set addon_version element
+	setLocaleProperty('#addon_version', 'title', 'popup_addon_version');
+	setProperty('#addon_version', 'innerText', addonVersion);
+	
+}
+
 document.addEventListener("DOMContentLoaded", function () {
-    //console.log(addonName + ' v' + addonVersion);
-	
-	//Load head
-	document.title = chrome.i18n.getMessage("name");
-	document.getElementsByTagName('meta').namedItem('author').setAttribute('content',author);
-	document.getElementsByTagName('meta').namedItem('description').setAttribute('content',chrome.i18n.getMessage("description"));
-	
-	//Load title
-	document.getElementById("title").innerHTML = chrome.i18n.getMessage("popup_title");
-	
-    // Load changelog element
-	document.getElementById("changelog").innerHTML = chrome.i18n.getMessage("popup_changelog");
-    document.getElementById("changelog").href = changelogURL;
-    document.getElementById("changelog").title = changelogURL;
-	
-	// Load issue_tracker element
-	document.getElementById("issue_tracker").innerHTML = chrome.i18n.getMessage("popup_issue_tracker");
-    document.getElementById("issue_tracker").href = issue_trackerURL;
-    document.getElementById("issue_tracker").title = issue_trackerURL;
-	
-	// Load source_code element
-	document.getElementById("source_code").innerHTML = chrome.i18n.getMessage("popup_source_code");
-    document.getElementById("source_code").href = homePage;
-    document.getElementById("source_code").title = homePage;
-	
-	// Load addon_version element
-	document.getElementById("addon_version").innerHTML = chrome.i18n.getMessage("popup_addon_version");
-    document.getElementById("addon_version").textContent = addonVersion;
+	loadPopup();
 });
 
 // Open clickable links

@@ -12,7 +12,7 @@
 		"description": "Description of the extension."
 	},
 	"popup_title": {
-		"message": "ZooMeeting<br>Redirector",
+		"message": "ZooMeeting\nRedirector",
 		"description": "Title of extension inside the popup."
 	},
 	"enabled": {

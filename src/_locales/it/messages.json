@@ -12,7 +12,7 @@
 		"description": "Descrizione dell'estensione."
 	},
 	"popup_title": {
-		"message": "ZooMeeting<br>Redirector",
+		"message": "ZooMeeting\nRedirector",
 		"description": "Titolo dell'estensione visualizzato nel popup."
 	},
 	"enabled": {
