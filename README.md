@@ -1,3 +1,7 @@
+> **:warning: WARNING**
+> 
+> **This repo has been archived due to a trademark issue. The new repository can be found [here](https://github.com/EdoardoTosin/Silly-Redirect-for-Zoom-Meetings)**
+
 <h1 align="center">
   <sub>
     <img src="https://raw.githubusercontent.com/EdoardoTosin/ZooMeeting-Redirector/main/src/icons/256x256.png" height="38" width="38">
